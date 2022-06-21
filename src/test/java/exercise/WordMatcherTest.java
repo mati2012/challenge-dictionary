@@ -1,17 +1,17 @@
 package exercise;
 
 import org.junit.Test;
-import utils.CharMixer;
+import utils.WordMatcher;
 
 import java.io.IOException;
 import java.util.List;
 
-public class CharMixerTest {
+public class WordMatcherTest {
 
     @Test
     public void amountOfMatchesFor3CharWord() throws IOException {
         String word = "row";
-        CharMixer mixer = new CharMixer();
+        WordMatcher mixer = new WordMatcher();
         List<String> matches = mixer.getWordMatches(word);
         assert (matches.size() == 2);
     }
@@ -19,7 +19,7 @@ public class CharMixerTest {
     @Test
     public void returnEmptyIfEmptyString() throws IOException {
         String word = "";
-        CharMixer mixer = new CharMixer();
+        WordMatcher mixer = new WordMatcher();
         List<String> matches = mixer.getWordMatches(word);
         assert (matches.size() == 0);
     }
@@ -27,7 +27,7 @@ public class CharMixerTest {
     @Test
     public void returnEmptyIfNoMatches() throws IOException {
         String word = "E$T";
-        CharMixer mixer = new CharMixer();
+        WordMatcher mixer = new WordMatcher();
         List<String> matches = mixer.getWordMatches(word);
         assert (matches.size() == 0);
     }

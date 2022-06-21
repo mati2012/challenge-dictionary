@@ -5,10 +5,10 @@ import java.util.List;
 
 import static utils.DataReader.readFile;
 
-public class CharMixer {
+public class WordMatcher {
     private final List<String> words;
 
-    public CharMixer() throws IOException {
+    public WordMatcher() throws IOException {
         this.words = readFile();
     }
 

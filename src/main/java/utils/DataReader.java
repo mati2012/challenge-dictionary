@@ -10,7 +10,7 @@ public class DataReader {
 
         BufferedReader reader;
         try {
-            String DIC_FILE_LOCATION = "C:\\WORKSPACE\\Java\\ChallengePublicis\\src\\main\\resources\\dictionary.txt";
+            String DIC_FILE_LOCATION = "C:\\WORKSPACE\\challenge-dictionary\\src\\main\\resources\\dictionary.txt";
             File file = new File(DIC_FILE_LOCATION);
             reader = new BufferedReader(new FileReader(file));
 
