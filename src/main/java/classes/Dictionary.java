@@ -1,6 +1,5 @@
 package classes;
 
-import java.io.IOException;
 import java.util.List;
 
 import static utils.DataReader.readFile;
@@ -8,11 +7,13 @@ import static utils.DataReader.readFile;
 public class Dictionary {
     private final List<String> words;
 
-    public Dictionary() throws IOException {
+    public Dictionary() {
         words = readFile();
     }
 
     public boolean isEnglishWord(String word) {
-        return words.stream().anyMatch(word::equalsIgnoreCase);
+        if (word != null) {
+            return words.stream().anyMatch(word::equalsIgnoreCase);
+        } else return false;
     }
 }

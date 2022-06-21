@@ -6,7 +6,7 @@ import java.util.List;
 
 public class DataReader {
 
-    public static List<String> readFile() throws IOException {
+    public static List<String> readFile() {
 
         BufferedReader reader;
         try {
@@ -21,11 +21,16 @@ public class DataReader {
         String line;
         List<String> data = new ArrayList<>();
 
-        while ((line = reader.readLine()) != null) {
-            data.add(line);
+
+        try {
+            while (((line = reader.readLine()) != null)) {
+                data.add(line);
+            }
+            return data;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
-
-        return data;
     }
-
 }
+
+

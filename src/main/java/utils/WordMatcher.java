@@ -1,6 +1,5 @@
 package utils;
 
-import java.io.IOException;
 import java.util.List;
 
 import static utils.DataReader.readFile;
@@ -8,7 +7,7 @@ import static utils.DataReader.readFile;
 public class WordMatcher {
     private final List<String> words;
 
-    public WordMatcher() throws IOException {
+    public WordMatcher() {
         this.words = readFile();
     }
 
